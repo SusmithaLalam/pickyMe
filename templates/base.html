@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{% block head_title %}pickyMe{% endblock head_title %}</title>
     {% include 'snippets/css.html' %}
 </head>
 <body>
-    <h1>Hello World</h1>
-    <h2>This should be a common text</h2>
     {% include 'snippets/nav.html' %}
-    <p>Text rendered from html: {{ html_var }}</p>
-    <p>Number rendered from html: {{ num_var }}</p>
-    
+
     <div class="container">
         {% block content %}{% endblock content %}
     </div>
+    
     {% include 'snippets/js.html' %}
 </body>
 </html>
